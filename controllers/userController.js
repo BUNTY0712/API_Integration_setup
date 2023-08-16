@@ -1,5 +1,7 @@
 const userModel = require('../models/userModel');
 const bcrypt = require('bcrypt');
+// import bcrypt from 'bcrypt'
+// import userModel from '../models/userModel.js'
 
 //create user register user
 exports.registerController = async (req, res) => {

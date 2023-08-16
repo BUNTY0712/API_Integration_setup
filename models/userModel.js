@@ -1,23 +1,32 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+// import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
-	{
-		username: {
-			type: String,
-			required: [true, 'username is required'],
-		},
-		email: {
-			type: String,
-			required: [true, 'email is required'],
-		},
-		password: {
-			type: String,
-			required: [true, 'password is required'],
-		},
-	},
-	{ timestamps: true }
+  {
+    username: {
+      type: String,
+      required: [true, "username is required"],
+    },
+    email: {
+      type: String,
+      required: [true, "email is required"],
+    },
+    password: {
+      type: String,
+      required: [true, "password is required"],
+    },
+    // blogs: [
+    //   {
+    //     type: mongoose.Types.ObjectId,
+    //     ref: "Blog",
+    //   },
+      // ],
+  },
+  { timestamps: true }
 );
 
-const userModel = mongoose.model('User', userSchema);
+const userModel = mongoose.model("user", userSchema);
 
 module.exports = userModel;
+
+// export default mongoose.model("user", userSchema);
